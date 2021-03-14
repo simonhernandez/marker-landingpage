@@ -1,0 +1,70 @@
+/*
+    ------------------------
+    -------- Plan ----------
+    ------------------------
+*/
+
+.plan{
+    padding: var(--space-2xl) var(--space-xl) var(--space-xl);
+    border-radius: var(--space-xs);
+    position: relative;
+    max-width: 327px;
+    
+    &--regular{
+        background-color: var(--color-secondary);
+    }
+
+    &--premium{
+        background-color: var(--color-accent);
+    }
+
+    &__icon{
+        position: absolute;
+        top: -26px;
+        left: var(--space-xl);
+    }
+
+    &__text-container,
+    &__details{
+        > *:not(:last-child) {
+            margin-bottom: var(--space-md);
+        }
+    }
+
+    &__text-container{
+        margin-bottom: var(--space-lg);
+    }
+
+    &__features{
+        > *:not(:last-child){
+            margin-bottom: var(--space-sm);
+        }
+    }
+
+    &__feature{
+        padding-left: var(--space-lg);
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 8px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            background-image: url(../../../assets/icon-check.svg);
+        }
+
+        &--white{
+            &::before{
+                background-image: url(../../../assets/icon-check-white.svg);
+            }
+        }
+    }
+
+    @include breakpoint-up(medium){
+        max-width: 445px;
+    }
+}

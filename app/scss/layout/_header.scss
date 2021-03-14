@@ -1,0 +1,34 @@
+/*
+    ------------------------
+    ------- Header ---------
+    ------------------------
+*/
+
+.header{
+    padding: calc(var(--space-base) * 2.5) 0;
+    margin-bottom: var(--space-lg);
+    background-color: var(--color-primary);
+    
+    .nav{
+        @include flex(c, c, row);
+        
+        &__logo{
+            max-width: 120px
+        }
+    }
+    
+    /* Tablet */
+    @include breakpoint-up(medium){
+        padding: var(--space-2xl) 0;
+        margin-bottom: var(--space-xl);
+
+        .nav{
+            @include flex(fs, c, row);
+        }
+    }
+    
+    /* Desktop */
+    @include breakpoint-up(large){
+        padding: 81px 0;
+    }
+}

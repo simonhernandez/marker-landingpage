@@ -1,0 +1,72 @@
+/*
+    ------------------------
+    --------- Hero ---------
+    ------------------------
+*/
+
+.hero{
+    /* Bg Images */
+    background-image: url(../../../assets/illustration-hero-left.svg),
+                      url(../../../assets/illustration-hero-right.svg);
+    background-position: left top,
+                         right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 205px 233px, 205px 233px;
+    padding-top: calc(233px + 48px);
+
+    &__text-container{
+        text-align: center;
+
+        .heading{
+            margin-bottom: var(--space-lg);
+            color: var(--color-text-white);
+        }
+
+        .paragraph{
+            margin-bottom: var(--space-xl);
+        }
+    }
+
+    &__icon--scroll{
+        margin: 0 auto;
+    }
+
+    /* Tablet */
+    @include breakpoint-up(medium){
+        padding: var(--space-2xl) 0;
+        background-size: 314px 355px, 316px 355px;
+        background-position: -40% top,
+                              140% top;
+
+        &__text-container{
+            background-image: url(../../../assets/bg-hero-squiggle.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            max-width: 457px;
+            margin: 0 auto;
+        }
+    }
+    
+    
+    /* Desktop */
+    @include breakpoint-up(large){
+        padding: 4.41rem 0;
+        background-size: 408px 459px, 396px 444px;
+        background-position: -10% top,
+                              110% top;
+    
+        &__text-container{
+            background-image: url(../../../assets/bg-hero-squiggle.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center top;
+            max-width: 540px;
+            margin: 0 auto;
+
+            .paragraph{
+                margin-bottom: var(--space-4xl);
+            }
+        }
+    }
+}

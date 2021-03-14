@@ -1,0 +1,25 @@
+/*
+    ------------------------
+    ------- Buttons --------
+    ------------------------
+*/
+
+.btn{
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--space-lg);
+    border: var(--space-xxxs) solid var(--color-button-border-normal);
+
+    &--primary{
+        background-color: var(--color-button-bg-normal);
+        border-color: var(--color-button-border-normal);
+        color: var(--color-button-text-normal);
+        
+        &:active,
+        &:hover{
+            background-color: var(--color-button-bg-hover);
+            border-color: var(--color-button-border-hover);
+            color: var(--color-button-text-hover);
+        }
+    }
+}

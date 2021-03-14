@@ -1,0 +1,76 @@
+/*
+    ------------------------
+    ------- Form -----------
+    ------------------------
+*/
+
+.form{
+
+    > *:not(:last-child){
+        margin-bottom: var(--space-lg);
+    }
+
+    input{
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--space-lg);
+        background-color: var(--color-input-bg-normal);
+
+        &:active,
+        &:focus{
+            background-color: var(--color-input-bg-active);
+            border-color: var(--color-input-border-active);
+            color: var(--color-input-text-active);
+        }
+        
+        &:invalid{
+            background-color: var(--color-input-bg-error);
+            border-color: var(--color-input-border-error);
+            color: var(--color-input-text-error);
+        }
+
+        &::placeholder {
+            color: var(--color-input-text-normal);
+            opacity: 1; /* Firefox */
+        }
+          
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: var(--color-input-text-normal);
+        }
+          
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: var(--color-input-text-normal);
+        }
+    }
+
+    &--cta{
+        input,
+        .btn{
+            width: 100%;
+        }
+
+        input{
+            border: 2px solid transparent;
+        }
+    }
+
+    /* Tablet & Desktop */
+    @include breakpoint-up(medium){
+
+        > *:not(:last-child){
+            margin-bottom: initial;
+        }
+
+        &--cta{
+            @include flex(sb, c, row);
+
+            .btn{
+                max-width: 140px;
+            }
+
+            .form__control{
+                flex: 1;
+                margin-right: var(--space-base);
+            }
+        }
+    }
+}

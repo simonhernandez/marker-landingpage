@@ -1,0 +1,42 @@
+/*
+    ------------------------
+    ------- Home -----------
+    ------------------------
+*/
+
+
+body{
+    background-color: var(--color-primary);
+}
+
+.main{
+    &--home{
+        .section{
+            margin-bottom: var(--space-8xl);
+        }
+    }
+    
+    /* Tablet */
+    @include breakpoint-up(medium){
+        &--home{
+            .section.hero{
+                margin-bottom: calc(var(--space-base) * 7);
+            }
+            .section.features{
+                margin-bottom: var(--space-8xl);
+            }
+        }
+    }
+
+    /* Desktop */
+    @include breakpoint-up(large){
+        &--home{
+            .section.hero{
+                margin-bottom: calc(var(--space-base) * 7);
+            }
+            .section.features{
+                margin-bottom: var(--space-8xl);
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/*
+    ------------------------
+    ------- Features -------
+    ------------------------
+*/
+
+
+.features{
+    
+    &__body{
+        > *:not(:last-child){
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    /* Tablet */
+    @include breakpoint-up(medium){
+        &__body{
+            > *:nth-child(2n+1) {
+                margin-left: auto;
+            }
+        }
+    }
+
+    /* Desktop */
+    @include breakpoint-up(large){
+        &__body{
+            max-width: 1110px;
+            > *:not(:last-child){
+                margin: initial;
+            }
+
+            @include flex(sb, c, row);
+            row-gap: 30px;
+
+            > *:nth-child(2n) {
+                margin-top: var(--space-2xl);
+            }
+        }
+    }
+}

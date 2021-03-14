@@ -1,0 +1,92 @@
+/*
+    ------------------------
+    ------- Colors ---------
+    ------------------------
+*/
+
+:root{
+
+    /* Main Colors */
+    --color-primary: #080C20;
+    --color-secondary: #093F68;
+    --color-accent: #3EE9E5;
+
+    /* Shades */
+    --color-gray: #777F98;
+    --color-gray-dim: rgba(119, 127, 152, .5973);
+    --color-primary-dim: rgba(8, 12, 32, .6);
+    --color-white: #FFF;
+    --color-white-dim: rgba(255, 255, 255, .5973);
+    --color-white-very-dim: rgba(255, 255, 255, .4);
+
+    /* Feedback Colors */
+    --color-error: #FF2965;
+
+    /* Typography */
+    --color-text-gray: var(--color-gray);
+    --color-text-gray-dim: var(--color-gray-dim);
+    --color-text-dark: var(--color-primary);
+    --color-text-dark-dim: var(--color-primary-dim);
+    --color-text-accent: var(--color-accent);
+    --color-text-white: var(--color-white);
+    --color-text-white-dim: var(--color-white-dim);
+
+    /* Form */
+    --color-input-bg-normal: var(--color-secondary);
+    --color-input-bg-active: var(--color-secondary);
+    --color-input-bg-error: var(--color-secondary);
+
+    --color-input-text-normal: var(--color-white-very-dim);
+    --color-input-text-active: var(--color-white);
+    --color-input-text-error: var(--color-white);
+
+    --color-input-border-normal: var(--color-secondary);
+    --color-input-border-active: var(--color-accent);
+    --color-input-border-error: var(--color-error);
+
+    /* Buttons */
+    --color-button-bg-normal: var(--color-accent);
+    --color-button-bg-active: transparent;
+    --color-button-bg-hover: transparent;
+
+    --color-button-text-normal: var(--color-secondary);
+    --color-button-text-active: var(--color-white);
+    --color-button-text-hover: var(--color-white);
+
+    --color-button-border-normal: var(--color-secondary);
+    --color-button-border-active: var(--color-accent);
+    --color-button-border-hover: var(--color-accent);
+
+}
+
+.text-gray{
+    color: var(--color-text-gray);
+}
+
+.text-gray-dim{
+    color: var(--color-text-gray-dim);
+}
+
+.text-dark{
+    color: var(--color-text-dark);
+}
+
+.text-dark-dim{
+    color: var(--color-text-dark-dim);
+}
+
+.text-accent{
+    color: var(--color-text-accent);
+}
+
+.text-white{
+    color: var(--color-text-white);
+}
+
+.text-white-dim{
+    color: var(--color-text-white-dim);
+}
+
+.text-white-very-dim{
+    color: var(--color-text-white-very-dim);
+}

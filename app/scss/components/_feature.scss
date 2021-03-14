@@ -1,0 +1,71 @@
+/*
+    ------------------------
+    ------- Feature --------
+    ------------------------
+*/
+
+.feature{
+    max-width: 327px;
+
+    &__img{
+        margin: 0 auto;
+        margin-bottom: var(--space-xl);
+        width: 120px;
+        height: 124px;
+        border-radius: 45px;
+        background-color: var(--color-secondary);
+
+        @include flex(c, c, row);
+
+        img{
+            width: 60%;
+        }
+    }
+
+    &__text-container{
+        margin-bottom: var(--space-sm);
+        text-align: center;
+
+        .heading{
+            margin-bottom: var(--space-sm);
+            color: var(--color-text-white)
+        }
+    }
+    
+
+    /* Tablet */
+    @include breakpoint-up(medium){
+        @include flex(sb, c, row);
+        max-width: 515px;
+        
+        &__text-container{
+            text-align: initial;
+            max-width: 340px;
+        }
+
+        &__img{
+            margin: initial;
+        }
+    }
+
+    /* Desktop */
+    @include breakpoint-up(large){
+        display: initial;
+        max-width: 255px;
+
+        &__img{
+            margin: initial;
+            margin-bottom: var(--space-2xl);
+            width: 160px;
+            height: 164px;
+        }
+    
+        &__text-container{
+            margin-bottom: var(--space-lg);
+
+            .heading{
+                margin-bottom: var(--space-lg);
+            }
+        }
+    }
+}

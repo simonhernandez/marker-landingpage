@@ -1,0 +1,47 @@
+/*
+    ------------------------
+    ------- Pricing --------
+    ------------------------
+*/
+
+.pricing{
+    &__header{
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: var(--space-5xl);
+        .heading{
+            margin-bottom: var(--space-lg);
+            color: var(--color-text-white);
+        }
+    }
+
+    &__item:not(:last-of-type){
+        margin-bottom: var(--space-4xl);
+    }
+
+    /* Tablet */
+    @include breakpoint-up(medium){
+        &__item{
+            @include flex(c, c, row);
+        }
+    }
+
+    /* Desktop */
+    @include breakpoint-up(large){
+
+        &__header{
+            max-width: 540px;
+            margin-bottom: 6rem;
+        }
+
+        &__list{
+            @include flex(sa, c, row);
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        &__item:not(:last-of-type){
+            margin-bottom: initial;
+        }
+    }
+}
