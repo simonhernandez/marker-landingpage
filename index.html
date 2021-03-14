@@ -11,6 +11,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./app/css/main.css">
 
+  <!-- Reveal On Scroll Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
 
@@ -21,7 +24,7 @@
     <div class="wrapper">
 
       <!-- Navigation -->
-      <nav class="nav">
+      <nav class="nav" data-aos="fade-down" data-aos-duration="1000">
 
         <!-- Nav Logo -->
         <a href="/" class="nav__logo"><img src="./assets/logo.svg" alt="Maker Logo"></a>
@@ -36,7 +39,7 @@
   <main class="main main--home">
 
     <!-- Section - Hero -->
-    <section class="section hero">
+    <section class="section hero" data-aos="fade" data-aos-duration="1500">
 
       <!-- Wrapper -->
       <div class="wrapper">
@@ -64,7 +67,7 @@
         <div class="features__body">
 
           <!-- Feature - 01 -->
-          <div class="feature">
+          <div class="feature" data-aos="fade-up" data-aos-duration="1000">
 
             <div class="feature__img"><img src="./assets/illustration-passions.svg" alt="Passions Illustration"></div>
 
@@ -76,7 +79,7 @@
           </div> <!-- // Features - 01 -->
 
           <!-- Feature - 02 -->
-          <div class="feature">
+          <div class="feature" data-aos="fade-down" data-aos-duration="1000">
 
             <div class="feature__img"><img src="./assets/illustration-financial-freedom.svg" alt="Financial Freedom Illustration"></div>
 
@@ -88,7 +91,7 @@
           </div> <!-- // Features - 02 -->
 
           <!-- Feature - 03 -->
-          <div class="feature">
+          <div class="feature" data-aos="fade-up" data-aos-duration="1000">
 
             <div class="feature__img"><img src="./assets/illustration-lifestyle.svg" alt="Lifestyle Illustration"></div>
 
@@ -100,7 +103,7 @@
           </div> <!-- // Features - 03 -->
 
           <!-- Feature - 04 -->
-          <div class="feature">
+          <div class="feature" data-aos="fade-down" data-aos-duration="1000">
 
             <div class="feature__img"><img src="./assets/illustration-work-anywhere.svg" alt="Work from Anywhere Illustration"></div>
 
@@ -122,7 +125,7 @@
       <!-- Wrapper -->
       <div class="wrapper">
 
-        <header class="pricing__header">
+        <header class="pricing__header" data-aos="fade" data-aos-duration="1000">
 
           <h2 class="heading heading--2">Our pricing plans</h2>
           <p class="paragraph">We only make money when our creators make money. Our plans are always affordable, and 
@@ -134,7 +137,7 @@
         <ul class="pricing__list">
 
           <!-- Pricing - Item 01 -->
-          <li class="pricing__item">
+          <li class="pricing__item" data-aos="fade-right" data-aos-duration="1000">
 
             <div class="plan plan--regular">
 
@@ -165,7 +168,7 @@
           </li> <!-- // Pricing - Item 01 -->
 
           <!-- Pricing - Item 02 -->
-          <li class="pricing__item">
+          <li class="pricing__item" data-aos="fade-left" data-aos-duration="1000">
 
             <div class="plan plan--premium">
 
@@ -211,12 +214,12 @@
       <!-- Wrapper -->
       <div class="wrapper">
 
-        <header class="cta__header">
+        <header class="cta__header" data-aos="fade" data-aos-duration="1000">
           <h2 class="heading heading--2 text-white">Get notified when we launch</h2>
         </header>
 
         <!-- CTA - Form -->
-        <form action="" class="form form--cta">
+        <form action="" class="form form--cta" data-aos="fade" data-aos-duration="1000">
           
           <!-- Email -->
           <div class="form__control">
@@ -234,6 +237,12 @@
   </main>
 
   <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      disable: 'mobile',
+    });
+  </script>
 
 </body>
 </html>
